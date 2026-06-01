@@ -228,7 +228,7 @@
         </div>
     </nav>
 
-    <main class="flex-grow pt-32 pb-32">
+    <main class="flex-grow pt-32 pb-8 md:pb-16">
         <!-- Hero Section -->
         <section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mb-24 reveal-on-scroll">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -237,9 +237,9 @@
             </div>
             
             <!-- Bento Grid Layout -->
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[300px] md:auto-rows-[400px]">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-auto md:auto-rows-[400px]">
                 <!-- Large Factory Image Card -->
-                <div class="md:col-span-8 relative rounded-lg overflow-hidden structural-shadow group reveal-on-scroll" style="transition-delay: 100ms;">
+                <div class="md:col-span-8 h-[300px] md:h-full relative rounded-lg overflow-hidden structural-shadow group reveal-on-scroll" style="transition-delay: 100ms;">
                     <img alt="Factory interior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-SPbkMAcwJwHCUrLVZuYm-hleGm2oyGSlBqQTaeZituFwXyPzRMe8zYayoGL7s7ostsHu03VkFfRyeFVZaqG6JnMH0uX7yo3xiJkiKL-avtIAjng_r63urNSHbLLIW4iH6pkjQPZtEZAwTl-kUbXzTnthJceTzyKx6p167Mt1C98sumRKKgdM2Gksm2PzCEk-H2DF75tOr0ynOtovFh7ntKlTXCBEC-5rh7IZMA3iWV6520_iYsp4WIcwCWv46j5xX1whiEB3kMSL">
                     <div class="absolute inset-0 bg-gradient-to-t from-surface-charcoal/80 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-8">
@@ -273,7 +273,7 @@
                 </div>
                 
                 <!-- Logs Image Card -->
-                <div class="md:col-span-6 relative rounded-lg overflow-hidden structural-shadow group reveal-on-scroll" style="transition-delay: 300ms;">
+                <div class="md:col-span-6 h-[250px] md:h-full relative rounded-lg overflow-hidden structural-shadow group reveal-on-scroll" style="transition-delay: 300ms;">
                     <img alt="Stacked logs" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZhXl6EYVe6BzUW9wHIxlwY1JmLERfMUYtxkfPX9GVYrSkzY2SwKYVxzI8uhIPrEJBtvRXFJlcIdQNTD9tn9FlBC9s3Bks99Iob8GCZEeJpjBQuuKWyf2ovntC4wX8ojV_ZAZusQ4TwntO1CMCqk1xldPkYhPvLwvaJRYtEAJqPLYDu1YRLBTfjbkzXi5jtAja486U0Xlf7pEFCpC5LrHNGvGZTcUQqWSwguz0vwTZ8CgnduVEfTD2F-9nJmN2vrLJPd_EJBCTukvi">
                     <div class="absolute inset-0 bg-surface-charcoal/40 group-hover:bg-surface-charcoal/20 transition-colors duration-300"></div>
                     <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -296,6 +296,64 @@
                             <span class="block text-headline-md font-headline-md text-primary mb-1">0</span>
                             <span class="block text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Internal Voids</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Warehouse, Storage & Logistics Section -->
+        <section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mb-12 md:mb-16 reveal-on-scroll" style="transition-delay: 100ms;">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-primary font-label-bold text-xs uppercase tracking-widest mb-3 block">OPERATIONAL TRANSPARENCY</span>
+                <h2 class="font-display-lg text-display-lg text-on-surface mb-4">Warehouse &amp; Logistics</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">Step inside our storage facilities and dispatch yard. Watch our daily unloading workflows and see our calibrated stocks awaiting nationwide transit.</p>
+            </div>
+
+            <!-- Gallery Filter Tabs -->
+            <div class="flex justify-center gap-2 md:gap-4 mb-10">
+                <button onclick="filterGallery('all')" id="tab-all" class="px-4 py-2 md:px-5 md:py-2 rounded-full font-label-bold text-[10px] md:text-xs uppercase tracking-wider border-2 border-primary bg-primary text-pure-white transition-all duration-300">All Logs</button>
+                <button onclick="filterGallery('logistics')" id="tab-logistics" class="px-4 py-2 md:px-5 md:py-2 rounded-full font-label-bold text-[10px] md:text-xs uppercase tracking-wider border-2 border-surface-variant text-secondary hover:border-primary/50 transition-all duration-300">Logistics &amp; Unloading</button>
+                <button onclick="filterGallery('warehouse')" id="tab-warehouse" class="px-4 py-2 md:px-5 md:py-2 rounded-full font-label-bold text-[10px] md:text-xs uppercase tracking-wider border-2 border-surface-variant text-secondary hover:border-primary/50 transition-all duration-300">Warehouse &amp; Stock</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter" id="gallery-grid">
+                <!-- Card 1: Unloading Footage (Logistics) -->
+                <div class="gallery-item logistics bg-pure-white rounded-lg overflow-hidden border border-surface-container structural-shadow group transition-all duration-300">
+                    <div class="relative h-[300px] md:h-[400px] overflow-hidden bg-surface-charcoal">
+                        <img alt="Unloading SelloGold plywood from truck" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/unloading_truck.jpg">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                        <span class="absolute top-4 left-4 bg-primary text-pure-white px-3 py-1 rounded text-[10px] font-label-sm tracking-wider uppercase">Active Dispatch</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-headline-md text-headline-sm text-on-surface mb-2">Truck Loading &amp; Unloading</h3>
+                        <p class="font-body-md text-body-sm text-on-surface-variant leading-relaxed">Daily operations showcasing SelloGold sheets carefully handled and dispatched from trucks directly into our central logistics terminal.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Finished Board Stock (Warehouse) -->
+                <div class="gallery-item warehouse bg-pure-white rounded-lg overflow-hidden border border-surface-container structural-shadow group transition-all duration-300">
+                    <div class="relative h-[300px] md:h-[400px] overflow-hidden bg-surface-charcoal">
+                        <img alt="Finished SelloGold plywood board standing in warehouse" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/finished_board.jpg">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                        <span class="absolute top-4 left-4 bg-[#1A1718] text-pure-white px-3 py-1 rounded text-[10px] font-label-sm tracking-wider uppercase">Finished Stock</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-headline-md text-headline-sm text-on-surface mb-2">SelloGold Finished Board Room</h3>
+                        <p class="font-body-md text-body-sm text-on-surface-variant leading-relaxed">Our fully stamped, IS-710 certified premium architectural marine grade plywood sheets inspected and stacked for distribution.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Blockboard Stock (Warehouse) -->
+                <div class="gallery-item warehouse bg-pure-white rounded-lg overflow-hidden border border-surface-container structural-shadow group transition-all duration-300">
+                    <div class="relative h-[300px] md:h-[400px] overflow-hidden bg-surface-charcoal">
+                        <img alt="Stacked SelloGold blockboards" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/stock_flushdoors.jpg">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                        <span class="absolute top-4 left-4 bg-[#1A1718] text-pure-white px-3 py-1 rounded text-[10px] font-label-sm tracking-wider uppercase">Storage Stack</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-headline-md text-headline-sm text-on-surface mb-2">Core Calibrations Yard</h3>
+                        <p class="font-body-md text-body-sm text-on-surface-variant leading-relaxed">High-density flush doors and blockboard stacks showing uniform edge calibrations, tight core layers, and exact thickness labels.</p>
                     </div>
                 </div>
             </div>
@@ -451,6 +509,38 @@
                 nav.classList.remove('bg-white/95', 'dark:bg-surface-charcoal/95', 'shadow-md');
             }
         });
+
+        // Gallery filtering logic
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('[id^="tab-"]');
+            
+            // Update active tab button style
+            buttons.forEach(btn => {
+                if (btn.id === `tab-${category}`) {
+                    btn.className = "px-4 py-2 md:px-5 md:py-2 rounded-full font-label-bold text-[10px] md:text-xs uppercase tracking-wider border-2 border-primary bg-primary text-pure-white transition-all duration-300";
+                } else {
+                    btn.className = "px-4 py-2 md:px-5 md:py-2 rounded-full font-label-bold text-[10px] md:text-xs uppercase tracking-wider border-2 border-surface-variant text-secondary hover:border-primary/50 transition-all duration-300";
+                }
+            });
+
+            // Filter items with smooth opacity transition
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 50);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
 
         // Custom Cursor Logic
         document.addEventListener('DOMContentLoaded', () => {
